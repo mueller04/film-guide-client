@@ -1,0 +1,19 @@
+.mat-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+
+    .mat-card-title {
+    display: flex;
+    justify-content: center;
+
+    }
+
+    .film-section {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+}
+
