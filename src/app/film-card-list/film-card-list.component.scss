@@ -1,0 +1,22 @@
+.film-card-list-container {
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+    justify-content: space-evenly;
+
+    @media only screen and (min-width: 599px) {
+        grid-template-columns: auto auto;
+    }
+
+    @media only screen and (min-width: 900px) {
+        grid-template-columns: auto auto auto;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    @media only screen and (min-width: 1400px) {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}

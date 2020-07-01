@@ -1,9 +1,11 @@
-<mat-card>
-    <mat-card-title>
-        <h3>{{filmSection.genre}}</h3>
-    </mat-card-title>
+<div class="film-card-container">
+    <mat-card>
+        <mat-card-title>
+            <h3>{{filmSection.genre}}</h3>
+        </mat-card-title>
     
-    <mat-card-content>
-        <div class="film-section" *ngFor="let film of filmSection.films">{{film}}</div>
-    </mat-card-content>
-</mat-card>
+        <mat-card-content>
+            <div class="film-section" *ngFor="let film of filmSection.films">{{film}}</div>
+        </mat-card-content>
+    </mat-card>
+</div>
