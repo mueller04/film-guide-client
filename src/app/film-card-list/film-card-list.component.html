@@ -1,12 +1,3 @@
 <div class="film-card-list-container">
-        <film-card></film-card>
-
-        <film-card></film-card>
-        <film-card></film-card>
-        <film-card></film-card>
-        <film-card></film-card>
-        <film-card></film-card>
-        <film-card></film-card>
-
-
+        <film-card *ngFor='let filmSection of filmSections' [filmSection]='filmSection'></film-card>
 </div>

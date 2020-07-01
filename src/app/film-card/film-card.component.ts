@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { FilmSection } from './../film-card-list/FilmSection';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'film-card',
@@ -7,9 +8,5 @@ import { Component } from '@angular/core';
 })
 export class FilmCardComponent {
 
-  filmSection = {
-    genre: "Drama",
-    films: ["Shawshank Redemption", "Flight", "Do The Right Thing", "The Godfather", "Taxi Driver"]
-  }
-
+  @Input() filmSection: FilmSection
 }
