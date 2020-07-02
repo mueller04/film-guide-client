@@ -1,4 +1,4 @@
-import { reducers } from './state/app.reducer';
+import { reducers } from './root-store/app.reducer';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +11,6 @@ import { HeaderComponent } from './header/header.component';
 import { FilmCardListComponent } from './film-card-list/film-card-list.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
-
-
 
 @NgModule({
   declarations: [

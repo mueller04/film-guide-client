@@ -1,5 +1,5 @@
 import { createSelector, ActionReducerMap } from "@ngrx/store";
-import { AppState } from "./app.state";
+import { AppState } from "../app.state";
 import { FilmState } from "./film.state";
 
 const initialState: FilmState = {
@@ -51,14 +51,6 @@ const initialState: FilmState = {
       ]
 }
 
-const selectFilm = (state: AppState) => state.film
-
-
-export const getFilmSections = createSelector(
-    selectFilm,
-    (state: FilmState) => state.filmSections 
-);
-
 export type FilmSectionActions = undefined;
 
 export const filmSectionsReducer = (
@@ -68,6 +60,9 @@ export const filmSectionsReducer = (
     return state;
 }
 
-export const reducers: ActionReducerMap<AppState> = {
-    film: filmSectionsReducer
-  };
+const selectFilm = (state: AppState) => state.film
+
+export const getFilmSections = createSelector(
+  selectFilm,
+  (state: FilmState) => state.filmSections 
+);
