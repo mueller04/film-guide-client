@@ -3,7 +3,7 @@ import { FilmCardListComponent } from './../film-card-list/film-card-list.compon
 import { FilmCardViewComponent } from "../film-card-view/film-card-view.component";
 
 export const appRoutes: Routes = [
-    {path: 'film-card-view', component: FilmCardViewComponent},
-    {path: 'film-card-list-view', component: FilmCardListComponent},
-    {path: '', redirectTo: '/film-card-list-view', pathMatch: 'full'}
+    {path: 'film-card-view/:genre', component: FilmCardViewComponent},
+    {path: 'film-card-list', component: FilmCardListComponent},
+    {path: '', redirectTo: '/film-card-list', pathMatch: 'full'}
 ]

@@ -1,1 +1,4 @@
-<p>film-card-view works!</p>
+<div class="film-card-container">
+    <h3>{{filmSection.genre}}</h3>
+    <div class="film-section" *ngFor="let film of filmSection.films">{{film}}</div>
+</div>

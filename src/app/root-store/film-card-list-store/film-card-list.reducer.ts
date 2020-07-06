@@ -1,4 +1,4 @@
-import { createSelector, ActionReducerMap } from "@ngrx/store";
+import { createSelector } from "@ngrx/store";
 import { AppState } from "../app.state";
 import { FilmState } from "./film.state";
 
@@ -65,4 +65,9 @@ const selectFilm = (state: AppState) => state.film
 export const getFilmSections = createSelector(
   selectFilm,
   (state: FilmState) => state.filmSections 
+);
+
+export const getFilmSectionByGenre = (genre: string) => createSelector(
+  selectFilm,
+  (state: FilmState) =>  state.filmSections.filter(filmSection => filmSection.genre.toLowerCase() === genre)[0]
 );
