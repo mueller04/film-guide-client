@@ -1,5 +1,7 @@
+import { FilmSection } from './../film-card-list/FilmSection';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { FilmState } from '../root-store/film-card-list-store/film.state';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
@@ -13,8 +15,6 @@ export class FilmSectionsService {
   constructor(private http: HttpClient) { }
 
   getFilmSections() {
-    this.http.get('http://localhost:8080/api/film-sections').subscribe(data => {
-      console.log(data)
-    })
+    return this.http.get<FilmState>('http://localhost:8080/api/film-sections')
   }
 }

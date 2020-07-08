@@ -1,3 +1,4 @@
+import { FilmSectionsEffectService } from './services/film-sections-effect.service';
 import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,7 @@ import { FilmCardComponent } from './film-card/film-card.component';
 import { HeaderComponent } from './header/header.component';
 import { FilmCardListComponent } from './film-card-list/film-card-list.component';
 import { FilmCardViewComponent } from './film-card-view/film-card-view.component';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { FilmCardViewComponent } from './film-card-view/film-card-view.component
       maxAge: 25
     }),
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    EffectsModule.forRoot([FilmSectionsEffectService])
   ],
   providers: [FilmSectionsService],
   bootstrap: [AppComponent]
